@@ -1,0 +1,49 @@
+// cart-items.component.scss
+
+/* Styles for the Angular Material table */
+.mat-elevation-z8 {
+    width: 80%;
+    /* Set the maximum width of the table */
+    margin: 0 auto;
+    /* Center the table horizontally */
+    border-radius: 8px;
+    overflow: hidden;
+
+    /* Optional: Add a box shadow for a subtle 3D effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the table header cells */
+.mat-header-cell {
+    font-weight: bolder;
+    color: #003973;
+    background-color: #f0f0f0;
+    /* Header background color */
+    padding: 12px 16px;
+}
+
+/* Styles for the table data cells */
+.mat-cell {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    /* Optional: Add a separator between rows */
+}
+
+/* Optional: Zebra striping to differentiate rows */
+.mat-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Styles for the spinner */
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    /* Adjust the height to fit your design */
+}
+
+/* Optional: Change the color of the spinner */
+.mat-progress-spinner circle {
+    stroke: #003973;
+}

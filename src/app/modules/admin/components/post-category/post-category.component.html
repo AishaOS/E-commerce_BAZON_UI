@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Add Category</h2>
+    <mat-spinner *ngIf="isSpinning"></mat-spinner>
+    <form [formGroup]="categoryForm" (ngSubmit)="addCategory()" [class.spinner-active]="isSpinning">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Name" formControlName="name" />
+            <mat-error *ngIf="categoryForm.get('name')?.hasError('required')">This input is required!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Description" formControlName="description"></textarea>
+            <mat-error *ngIf="categoryForm.get('description')?.hasError('required')">This input is required!</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Add Category</button>
+    </form>
+</div>
