@@ -12,14 +12,6 @@
                     </mat-error>
                 </mat-form-field>
 
-                <!-- <mat-form-field appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input matInput type="password" formControlName="password" placeholder="Password" required>
-                    <mat-error *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
-                        Please enter a valid password.
-                    </mat-error>
-                </mat-form-field> -->
-
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
                     <input matInput type="{{ hidePassword ? 'password' : 'text' }}" formControlName="password"

@@ -69,7 +69,7 @@ export class LoginComponent {
             { duration: 5000 }
           );
         } else {
-          this.snackBar.open('Bad credentials', 'ERROR', { duration: 5000 });
+          this.snackBar.open('ERROR', 'Unkown email or password', { duration: 5000 });
         }
       }
     );

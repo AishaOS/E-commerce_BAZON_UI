@@ -1,14 +1,15 @@
+
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin:  0 auto;
     padding: 20px;
     margin-top: 90px;
+    background-color: #e8b923;
 
     h2 {
         text-align: center;
         margin-bottom: 20px;
         color: #3f51b5;
-        /* Update with your desired color code */
     }
 
     form {
@@ -21,7 +22,6 @@
             .mat-form-field-wrapper {
                 border-radius: 4px;
                 border: 1px solid #ccc;
-                /* Update with your desired color code */
             }
 
             .mat-form-field-outline {
@@ -30,7 +30,6 @@
 
             .mat-input-element {
                 color: #3f51b5;
-                /* Update with your desired color code */
             }
         }
 

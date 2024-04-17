@@ -2,13 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    background-color: #868686;
 }
 
 mat-card {
     max-width: 400px;
     width: 100%;
     padding: 20px;
+    background-color: #e8b923;
 
     @media screen and (max-width: 500px) {
         max-width: 90%;
@@ -19,6 +21,7 @@ mat-card-title {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+    
 }
 
 form {
@@ -30,6 +33,7 @@ form {
 mat-form-field {
     width: 100%;
     margin-bottom: 20px;
+    
 }
 
 button {
@@ -39,10 +43,12 @@ button {
 @media screen and (max-width: 500px) {
     mat-card-title {
         font-size: 20px;
+        
     }
 
     mat-form-field {
         margin-bottom: 10px;
+        
     }
 }
 
