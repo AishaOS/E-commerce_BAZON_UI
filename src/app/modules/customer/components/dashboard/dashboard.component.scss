@@ -28,18 +28,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #f8f8f8;
     min-height: 70vh;
     padding: 20px;
 
     .product-card {
-        width: calc(33.33% - 20px);
+        width: calc(33% - 10px);
         margin-bottom: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
         .product-image {
-            height: 200px;
+            height: 350px;
             border-radius: 10px 10px 0 0;
             overflow: hidden;
 
@@ -105,12 +104,10 @@
     align-items: center;
     justify-content: center;
     height: 300px;
-    /* Adjust the height to fit your design */
 
     span {
         font-size: 18px;
         color: #616161;
-        /* Adjust the text color as needed */
         margin-top: 10px;
     }
 }

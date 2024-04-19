@@ -62,5 +62,19 @@ export class DashboardComponent {
       }
     });
   }
-
+ 
+  /* addToWishlist(productId: any): void {
+    this.customerService.addToWishlist(productId).subscribe(res => {
+      if (res.id != null) {
+        this.snackBar.open("Product added to cart successfully", "Close", { duration: 5000 });
+      } else {
+        this.snackBar.open("Product already exist in the cart", "Close", { duration: 5000 });
+      }
+    }, error => {
+      console.error('Error adding product to wishlist:', error);
+      this.snackBar.open("Failed to add product to cart", "Close", { duration: 5000 });
+    });
+  }*/
 }
+
+

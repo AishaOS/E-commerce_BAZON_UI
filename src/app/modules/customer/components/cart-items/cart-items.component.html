@@ -14,7 +14,7 @@
                         <div class="item-price">{{ item.price | currency }}</div>
                         <div class="quantity-controls">
                             <button mat-icon-button (click)="decreaseQuantity(item.productId)"
-                                [disabled]="item.quantity == 1">
+                                [disabled]="item.quantity == 0">
                                 <mat-icon>remove_circle_outline</mat-icon>
                             </button>
                             <span class="quantity">{{ item.quantity }}</span>
