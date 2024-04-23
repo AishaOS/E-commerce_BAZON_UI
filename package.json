@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@paypal/sdk-client": "^4.0.187",
     "emoji-mart": "^5.5.2",
     "ng-emoji-picker": "^6.0.1",
     "rxjs": "~7.8.0",
