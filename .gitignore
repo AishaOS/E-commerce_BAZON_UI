@@ -1,2 +1,24 @@
-node_modules
-.angular/cache/
+# .gitignore
+# Ignore system files
+*.log
+*.cache
+*.DS_Store
+*.angular/cache/
+
+# Ignore node modules
+node_modules/
+
+# Ignore dist folder
+dist/
+
+# Ignore IDE specific files
+.idea/
+*.iml
+.vscode/
+
+# Ignore build files
+*.o
+*.exe
+*.dll
+*.so
+*.dylib

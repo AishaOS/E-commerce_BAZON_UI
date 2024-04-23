@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { OrderPlaceComponent } from '../order-place/order-place.component';
 
+declare let paypal: any;
 @Component({
   selector: 'app-cart-items',
   templateUrl: './cart-items.component.html',
@@ -15,6 +16,7 @@ export class CartItemsComponent {
   cartItems: any[] = [];
   order: any;
   couponForm!: FormGroup;
+  showPaypal: boolean;
 
   constructor(private customerService: CustomerService,
     private snackbar: MatSnackBar,
@@ -24,10 +26,33 @@ export class CartItemsComponent {
 
   ngOnInit(): void {
     this.getCart();
+    this.showPaypal = false;
 
     this.couponForm = this.fb.group({
       code: [null, [Validators.required]]
     });
+
+      paypal
+        .Buttons({
+          createOrder: (data, actions) => {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: '0.01',
+                  },
+                },
+              ],
+            });
+          },
+          onApprove: (data, actions) => {
+            return actions.order.capture().then((details) => {
+              alert('Transaction completed by ' + details.payer.name.given_name);
+            });
+          },
+        })
+        .render('#paypal-button-container');
+    
   }
 
   applyCoupon(){
@@ -75,7 +100,11 @@ export class CartItemsComponent {
 
 
   placeOrder(): void {
-    this.dialog.open(OrderPlaceComponent);
+    let dialogRef = this.dialog.open(OrderPlaceComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Dialog closed');
+      this.showPaypal = true;
+  });
   }
 
 }
